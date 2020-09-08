@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Contact Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+	<script type="text/javascript">
+		function validate()
+		{
+			var uname = document.getElementById("name");
+			var uemail = document.getElementById("email");
+
+			if(uname.value.trim() =="")
+			{
+				alert("Name is necessary");
+				uname.focus();
+				return false;
+			}
+			if(uemail.value.trim()=="") 
+			{
+               alert("Enter valid email address");
+               uemail.focus();
+               return false;
+			}
+			var emails = f1.email.value;
+			atpos = emails.indexOf("@");
+			dotpos = emails.lastIndexOf(".");
+			if(atpos < 1 || (dotpos - atpos < 2))
+			{
+				alert("Invalid Email");
+				return false;
+			}
+			var uphone = f1.phone.value; 
+			if(uphone == "" || isNaN(uphone) || uphone.length != 10)
+			{
+				alert("Enter Phone number of length 10");
+				return false;
+			} 
+			var post = f1.postalcode.value;
+            if (post == "" || isNaN(post) || post.length != 5) 
+            {
+                alert("Enter 5 digit postal code in format #####");
+                return false;
+            }
+			else
+			{
+				alert("Thank You For Your Time!!!")
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<a id="top"></a>
+	<div id="topbar">
+			<h4>Need Help? 01-4242424 |<a class="active" href="contactus.html"> Contact</a></h4>
+			<div class="myaccount"><a href="accountlogin.html"><h3><i class="fa fa-user-o" aria-hidden="true"></i> Login/Signup</a></h3></div>
+		</div>
+		<div id="header">
+			<div class="navbar">
+				<div class="logo">
+			<a href="index.html"><img src="images/logo.png" width="150px" title="logo" alt="Company Logo"></a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="popular.html">Popular Products</a></li>
+				<li><a href="brands.html">Customize</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a class="active" href="contactus.html">Contact Us</a></li>
+				<li><a href="https://www.daraz.com.np/laptops/?spm=a2a0e.11779170.cate_1.3.287d2d2ba6AtRu" target="_blank"><i class="fa fa-shopping-cart" area-hidden="true"></i></a></li>
+        
+			</ul>
+			
+            </nav>
+
+			</div>
+
+		</div>
+	
+	<div id="container">
+		
+		
+		<div id="contactus">
+
+		<div class="left"><h1>Contact Us</h1>
+		<hr width="50px" color="red"><br>
+			<h2><i class="fa fa-map-marker" aria-hidden="true"></i><br> Address: Balaju, Kathmandu</h2>
+			<br>
+			<br>
+		
+		 <h2><i class="fa fa-envelope" aria-hidden="true"></i><br> Email: sales@piratecorp.com.np</h2>
+		 <br>
+		 <br>
+
+		 <h2><i class="fa fa-phone" aria-hidden="true"></i><br>Phone: +977 9860486984
+		 <br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+977 01-4232020</h2>
+		</div>
+
+		<div class="center">
+			<h1 align="left"><b>Send Your Queries</b></h1>
+			<hr width="40px" color="red">
+			<br>
+			<div id="error"></div>
+                <form name="f1" onsubmit="return validate();" action="contactus.html"> 
+                	<div>
+                <label for="name"><h2>Name*</h2></label>
+                			    
+				<input id="name" name="name" type="text" placeholder="Your Name" style="width: 100%; height:50px;"></div>
+				<br>
+
+				<div>
+				<label for="email"><h2>Email*</h2></label>
+				
+
+				<input id="email" name="email" placeholder="Your Email" type="text" style="width: 100%; height:50px;"></div>
+				
+				<div>
+					<br>
+				<label for="phone"><h2>Phone Number*</h2></label>
+				
+				<input id="phone" name="Phone Number" placeholder="Your Phone" type="text" style="width: 100%; height:50px;"></div>
+				<br>
+				<div>
+					<label for="phone"><h2>Postal Code*</h2></label>
+					
+					<input id="postalcode" type="text" name="postalcode" placeholder="Your Postal Code" style="width:100%; height:50px;"></div>
+					<br>
+					
+					<div style="font-size: 22px;font-family: 'Poppins', sans-serif; ">
+						<label for="gender"><h2>Gender</h2></label>
+						
+						<input type="radio" name="gender" value="male" checked>male<br>
+						<input type="radio" name="gender" value="female">female
+					</div>
+					<br>
+					
+				<div>
+				<label for="queries"><h2>What are your queries?</h2></label>
+				
+				<textarea placeholder="Your Queries here" style="resize:none; font-size: 16px; width:100%;height:300px;position: relative;font-family: 'Poppins', sans-serif; "></textarea></div>
+				<button type="submit" class="btn">Submit</button>
+			</form>
+			</div>
+		</div>
+        <!-------brands------------->
+<div class="brands">
+	<div class="smallcontainer">
+		<h1><u>Our Official Partner Brands</u></h1>
+	<div class="row">
+
+		<div class="col-3">
+		<a href="https://www.lenovo.com/us/en/" target="_blank"><img src="images/lenovo.png" title="lenovo" alt="lenovo-logo"></a></div>
+	    <div class="col-3">
+		<a href="https://rog.asus.com/" target="_blank"><img src="images/rog.png" title="rog" alt="rog-logo"></a></div>
+		<div class="col-3">
+		<a href="https://www8.hp.com/us/en/home.html" target="_blank"><img src="images/hp.png" title="hp" alt="hp-logo"></a></div>
+		<div class="col-3">
+		<a href="https://www.dell.com/" target="_blank"><img src="images/dell.png" title="dell" alt="dell-logo"></a></div>
+	
+	
+
+</div>
+</div>
+</div>
+
+<div id="social">
+	<h1><u>Follow Us On</u></h1>
+	<div class="row1">
+		<div class="col-4">
+		<a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" title="facebook" alt="facebook"></a></div>
+		<div class="col-4">
+		<a href="https://www.youtube.com"target="_blank"><img src="images/insta.png" title="youtube" alt="youtube"></a></div>
+		<div class="col-4">
+		<a href="https://www.twitter.com"target="_blank"><img src="images/twitter.png" title="twitter" alt="twitter"></a></div>
+
+		</div>	
+
+		</div>
+
+
+</div>
+<div class="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.5724998791275!2d85.29297791501588!3d27.730482682782398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18c0524e9853%3A0x3a99ae245360def7!2sBalaju%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1598099046445!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<div class="generic">
+    
+        <div class="gentext">
+            <div class="rightside">
+<h1>Support</h1>
+<h3><i class="fa fa-map-marker" aria-hidden="true"></i> Banasthali, Balaju Kathmandu</h3>
+<h3><a href="mailto:support@piratecorp.com.np?subject = Support&body=Message"><i class="fa fa-envelope" aria-hidden="true"></i> support@piratecorp.com.np</a></h3>
+<h3><a href="tel:+977 9860486984"><i class="fa fa-phone" aria-hidden="true"></i> +977 9860486984</a></h3>
+</div>
+            <h1 align="left">SiteMap</h1>
+         <ul type="bullet">
+            <h2><li><a href="popular.html">Popular Products</a></li></h2>
+            <h2><li><a href="brands.html">Customize</a></li></h2>
+            <h2><li><a href="gallery.html">Gallery</a></li></h2>
+            <h2><li><a href="aboutus.html">About Us</a></li></h2>
+            <h2><li><a class="active" href="contactus.html">Contact Us</a></li></h2>
+        </ul>
+        <div class="centerside">
+        <img src="images/logo.png" alt="logo">
+        <h4 style="font-size: 20px; position: relative;font-family: 'Poppins', sans-serif; top:-320px;text-align: center;">We are available at</h4>
+    <h6 style=" font-size:24px;text-align: center;position: relative;top:-300px;"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+    <i class="fa fa-youtube" aria-hidden="true"></i>&nbsp;&nbsp;
+    <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;</h6>
+        <h5 align="center" style="font-size: 20px; position: relative;font-family: 'Poppins', sans-serif; top:0px; left: 0px;">Exceeding Expectations Since 2005</h5>
+
+</div>
+</div>
+<div class="home"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+    <div class="up"><a href="#top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a></div>
+        <div class="email"><a href="mailto: piratecorp@gmail.com.np" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i>
+</a></div>
+</div>
+<div id="footer">
+<h1><i class="fa fa-copyright" aria-hidden="true"></i> PIRATECORP PVT.LTD.(2020).All Rights Reserved. Designed By Utkrista Acharya</h1>
+</div>
+
+</body>
+</html>
